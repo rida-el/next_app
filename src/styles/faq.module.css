@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+/* Accordion styles */
+
+.containerquestion {
+	width: 100%;
+	max-width: 1100px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 65px;
+  }
+  .title {
+	width: 100%;
+	margin: 45px 0;
+  }
+  .title h1 {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+  
+	font-size: 48px;
+	line-height: 65px;
+	text-align: left;
+  
+	color: #000000;
+  }
+  
+  .title .element img {
+	margin-bottom: -35px;
+	left: 463px;
+	top: -44px;
+  }
+  .tabs {
+	border-radius: 8px;
+	overflow: hidden;
+	width: 1100px;
+	background: #ffffff;
+	/* box-shadow */
+  
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	margin: 10px;
+  }
+  
+  .tab {
+	width: 100%;
+	overflow: hidden;
+  }
+  .tablabel {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+  
+	font-weight: bold;
+	cursor: pointer;
+	/* Icon */
+  }
+  .tablabelfirst {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	background: #9E192E;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+	/* Icon */
+  }
+
+  .tablabel::after {
+	content: "❯";
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	transition: all 0.35s;
+  }
+  .tablabelfirst::after {
+	content: "❯";
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	
+	transform: rotate(90deg);
+  }
+  .tabcontent {
+	max-height: 0;
+	padding: 0 1em;
+	transition: all 0.35s;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 190.5%;
+	color: #9E192E;
+	text-align: left;
+	
+  }
+  .tabcontentfirst
+  {
+	transition: all 0.35s;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 190.5%;
+	color: #9E192E;
+	text-align: left;
+	max-height: 100vh;
+	padding: 1em;
+	
+  }
+  .tabclose {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1em;
+	font-size: 0.75em;
+	cursor: pointer;
+  }
+  
+  .tab label {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 150%;
+	/* identical to box height, or 36px */
+  }
+  
+  input:checked + .tablabelfirst {
+	background: #ffffff;
+	color: rgb(0, 0, 0);
+  }
+  input:checked + .tablabel::after {
+	transform: rotate(90deg);
+  }
+  input:checked + .tablabelfirst::after {
+	transform: rotate(90deg);
+   
+  }
+  
+  input:checked ~ .tabcontent {
+	max-height: 100vh;
+	padding: 1em;
+  }
+  input:checked ~ .tabcontentfirst {
+	max-height: 0;
+	padding: 0 1em;
+	transition: all 0.35s;
+  }
+  #chck1,
+  #chck2,
+  #chck3,
+  #chck4,
+  #chck5 {
+	display: none;
+  }
+  
+  @media screen and (max-width: 990px) {
+	.title h1 {
+		font-family: 'Montserrat Alternates', sans-serif;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 30px;
+	  line-height: 150%;
+	  text-align: center;
+	  color: #000000;
+	}
+	.tab label {
+		font-family: 'Montserrat Alternates', sans-serif;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-size: 18px;
+	  line-height: 150%;
+	  
+	}
+	.tabcontent {
+		font-family: 'Montserrat Alternates', sans-serif;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-size: 18px;
+	  line-height: 150%;
+	  color: #000000;
+	}
+  }
+  
